@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "f802dd62-6d8c-4235-9587-a6667c72508e",
+		"name": "conductor-terminal",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "listar",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8080/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"logic\": 55443322,\r\n    \"serial\": \"789\",\r\n    \"model\": \"QWWIN\",\r\n    \"sam\": 0,\r\n    \"ptid\": \"F04A2E4088B\",\r\n    \"plat\": 4,\r\n    \"version\": \"8.00b3\",\r\n    \"mxr\": 0,\r\n    \"mxf\": 16777216,\r\n    \"VERFM\":\"PWWIN\"\r\n}"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "adicionar-html",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "text/html"
+					},
+					{
+						"key": "Accept-Charset",
+						"value": "utf-8",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "44332211;123;PWWIN;0;F04A2E4088B;4;8.00b3;0;16777216;PWWIN"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/0.0.1-SNAPSHOT/products",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"0.0.1-SNAPSHOT",
+						"products"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "atualizar-html",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "text/html"
+					},
+					{
+						"key": "Accept-Charset",
+						"type": "text",
+						"value": "utf-8"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ";123;PWWIN;0;F04A2E4088B;4;8.00b3;0;16777216;TWWIN"
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8080/0.0.1-SNAPSHOT/products/44332211",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8080",
+					"path": [
+						"0.0.1-SNAPSHOT",
+						"products",
+						"44332211"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "no delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/0.0.1-SNAPSHOT/products",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"0.0.1-SNAPSHOT",
+						"products"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

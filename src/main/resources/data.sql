@@ -1,0 +1,18 @@
+CREATE SCHEMA conductor ;
+
+CREATE TABLE conductor.terminal (
+  logic INT NOT NULL,
+  serial VARCHAR(100) NOT NULL,
+  model VARCHAR(100) NOT NULL,
+  sam INT NULL,
+  ptid VARCHAR(100) NULL,
+  plat INT NULL,
+  version VARCHAR(100) NOT NULL,
+  mxr INT NULL,
+  mxf INT NULL,
+  verfm VARCHAR(100) NULL,
+  PRIMARY KEY (logic));
+
+
+INSERT INTO conductor.terminal VALUES (44332211,123,'PWWIN',0,'F04A2E4088B',4,'8.00b3',0,16777216,'PWWIN');
+INSERT INTO conductor.terminal VALUES (55332211,456,'PWWIN',0,'F04A2E5099A',5,'8.00b3',0,16777216,'PWWIN');
